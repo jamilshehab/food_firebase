@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="dist/output.css" rel="stylesheet" />
+  <title>Welcome to Firebase Hosting</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/11.1.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/11.1.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/11.1.0/firebase-performance-compat.js"></script>
+
+
+</head>
+
+<body>
+  <nav class="bg-transparent   antialiased">
+    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
+      <div class="flex items-center justify-between">
+
+        <div class="flex items-center space-x-8">
+          <div class="shrink-0">
+            <a href="index.html" class="">
+              <img class="block w-auto h-8  " src="assets/images/logo/logo.svg" alt="">
+            </a>
+          </div>
+
+
+        </div>
+        <div class="flex items-center justify-center">
+          <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+            <li>
+              <a href="#"
+                class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">
+                Home
+              </a>
+            </li>
+            <li class="shrink-0">
+              <a href="dashboard.html"
+                class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">
+                Admin
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="flex items-center lg:space-x-2">
+
+          <button id="myCartDropdownButton1" data-dropdown-toggle="myCartDropdown1" type="button"
+            class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white">
+            <span class="sr-only">
+              Cart
+            </span>
+            <svg class="w-5 h-5 lg:me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+            </svg>
+            <span class="hidden sm:flex">My Cart</span>
+            <svg class="hidden sm:flex w-4 h-4 text-gray-900 dark:text-white ms-1" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 9-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="myCartDropdown1"
+            class="hidden z-10 mx-auto max-w-sm space-y-4 overflow-hidden rounded-lg bg-white p-4 antialiased shadow-lg dark:bg-gray-800">
+            <div class="grid grid-cols-2">
+              <div>
+                <a href="#"
+                  class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline">Apple
+                  iPhone 15</a>
+                <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">$599</p>
+              </div>
+
+              <div class="flex items-center justify-end gap-6">
+                <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">Qty: 1</p>
+
+                <button data-tooltip-target="tooltipRemoveItem1a" type="button"
+                  class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600">
+                  <span class="sr-only"> Remove </span>
+                  <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm7.7-3.7a1 1 0 0 0-1.4 1.4l2.3 2.3-2.3 2.3a1 1 0 1 0 1.4 1.4l2.3-2.3 2.3 2.3a1 1 0 0 0 1.4-1.4L13.4 12l2.3-2.3a1 1 0 0 0-1.4-1.4L12 10.6 9.7 8.3Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="tooltipRemoveItem1a" role="tooltip"
+                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                  Remove item
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2">
+              <div>
+                <a href="#"
+                  class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline">Apple
+                  iPad Air</a>
+                <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">$499</p>
+              </div>
+
+              <div class="flex items-center justify-end gap-6">
+                <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">Qty: 1</p>
+
+                <button data-tooltip-target="tooltipRemoveItem2a" type="button"
+                  class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600">
+                  <span class="sr-only"> Remove </span>
+                  <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm7.7-3.7a1 1 0 0 0-1.4 1.4l2.3 2.3-2.3 2.3a1 1 0 1 0 1.4 1.4l2.3-2.3 2.3 2.3a1 1 0 0 0 1.4-1.4L13.4 12l2.3-2.3a1 1 0 0 0-1.4-1.4L12 10.6 9.7 8.3Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="tooltipRemoveItem2a" role="tooltip"
+                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                  Remove item
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2">
+              <div>
+                <a href="#"
+                  class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline">Apple
+                  Watch SE</a>
+                <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">$598</p>
+              </div>
+
+              <div class="flex items-center justify-end gap-6">
+                <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">Qty: 2</p>
+
+                <button data-tooltip-target="tooltipRemoveItem3b" type="button"
+                  class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600">
+                  <span class="sr-only"> Remove </span>
+                  <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm7.7-3.7a1 1 0 0 0-1.4 1.4l2.3 2.3-2.3 2.3a1 1 0 1 0 1.4 1.4l2.3-2.3 2.3 2.3a1 1 0 0 0 1.4-1.4L13.4 12l2.3-2.3a1 1 0 0 0-1.4-1.4L12 10.6 9.7 8.3Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="tooltipRemoveItem3b" role="tooltip"
+                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                  Remove item
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2">
+              <div>
+                <a href="#"
+                  class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline">Sony
+                  Playstation 5</a>
+                <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">$799</p>
+              </div>
+
+              <div class="flex items-center justify-end gap-6">
+                <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">Qty: 1</p>
+
+                <button data-tooltip-target="tooltipRemoveItem4b" type="button"
+                  class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600">
+                  <span class="sr-only"> Remove </span>
+                  <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm7.7-3.7a1 1 0 0 0-1.4 1.4l2.3 2.3-2.3 2.3a1 1 0 1 0 1.4 1.4l2.3-2.3 2.3 2.3a1 1 0 0 0 1.4-1.4L13.4 12l2.3-2.3a1 1 0 0 0-1.4-1.4L12 10.6 9.7 8.3Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="tooltipRemoveItem4b" role="tooltip"
+                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                  Remove item
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2">
+              <div>
+                <a href="#"
+                  class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline">Apple
+                  iMac 20"</a>
+                <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">$8,997</p>
+              </div>
+
+              <div class="flex items-center justify-end gap-6">
+                <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">Qty: 3</p>
+
+                <button data-tooltip-target="tooltipRemoveItem5b" type="button"
+                  class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600">
+                  <span class="sr-only"> Remove </span>
+                  <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm7.7-3.7a1 1 0 0 0-1.4 1.4l2.3 2.3-2.3 2.3a1 1 0 1 0 1.4 1.4l2.3-2.3 2.3 2.3a1 1 0 0 0 1.4-1.4L13.4 12l2.3-2.3a1 1 0 0 0-1.4-1.4L12 10.6 9.7 8.3Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="tooltipRemoveItem5b" role="tooltip"
+                  class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                  Remove item
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" title=""
+              class="mb-2 me-2 inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button"> Proceed to Checkout </a>
+          </div>
+
+          <button id="userDropdownButton1" data-dropdown-toggle="userDropdown1" type="button"
+            class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white">
+            <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-width="2"
+                d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+            Account
+            <svg class="w-4 h-4 text-gray-900 dark:text-white ms-1" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 9-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="userDropdown1"
+            class="hidden z-10 w-56 divide-y divide-gray-100 overflow-hidden overflow-y-auto rounded-lg bg-white antialiased shadow dark:divide-gray-600 dark:bg-gray-700">
+            <ul class="p-2 text-start text-sm font-medium text-gray-900 dark:text-white">
+              <li><a href="#" title=""
+                  class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                  My Account </a></li>
+              <li><a href="#" title=""
+                  class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                  My Orders </a></li>
+              <li><a href="#" title=""
+                  class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Settings </a></li>
+              <li><a href="#" title=""
+                  class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Favourites </a></li>
+              <li><a href="#" title=""
+                  class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Delivery Addresses </a></li>
+              <li><a href="#" title=""
+                  class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Billing Data </a></li>
+            </ul>
+
+            <div class="p-2 text-sm font-medium text-gray-900 dark:text-white">
+              <a href="#" title=""
+                class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                Sign Out </a>
+            </div>
+          </div>
+
+          <button type="button" data-collapse-toggle="ecommerce-navbar-menu-1" aria-controls="ecommerce-navbar-menu-1"
+            aria-expanded="false"
+            class="inline-flex lg:hidden items-center justify-center hover:bg-gray-100 rounded-md dark:hover:bg-gray-700 p-2 text-gray-900 dark:text-white">
+            <span class="sr-only">
+              Open Menu
+            </span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <body>
+    <section class=" ">
+      <div class="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-slate-200">
+        <div class="max-lg:order-1 max-lg:text-center sm:p-12 p-4">
+          <h2 class="text-gray-800 lg:text-5xl text-3xl font-bold lg:!leading-[56px]">Elevate Your Experience
+            with
+            Modern Elegance</h2>
+          <p class="text-gray-800 mt-4 text-base leading-relaxed">Laboris qui Lorem ad tempor ut
+            reprehenderit.
+            Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut
+            reprehenderit.</p>
+          <button type='button'
+            class="bg-transparent border-2 border-yellow-600 mt-4 transition-all text-white bg-yellow-600 font-bold text-sm rounded-md px-6 py-2.5 hover:bg-yellow-700 hover:border-yellow-00">Order
+            Now</button>
+        </div>
+
+        <div class="lg:h-[480px] flex items-center">
+          <img src="assets/images/Banner/1.png" class=" w-full h-full object-cover" alt="Dining Experience" />
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="bg-white  text-gray-700  py-10">
+      <div class="container mx-auto relative">
+        <div class=" ">
+          <div class="flex justify-center items-center  ">
+            <h1 class="text-4xl ">Our Products</h1>
+          </div>
+
+          <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4  " id="grid-items">
+            <article class="">
+              <div class="aspect-square overflow-hidden">
+                <img class="h-full w-full transition-all duration-300 hover:scale-125"
+                  src="assets/images/products/4.png" alt="" />
+              </div>
+
+              <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
+                <div class="mb-2 flex">
+                  <p class="mr-3 text-sm font-semibold text-center">$99.00</p>
+                </div>
+                <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
+              </div>
+              <button
+                class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
+                <div
+                  class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition  hover:bg-orange-600 group-hover:text-white">
+                  Add To Cart</div>
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 relative bg-slate-200">
+      <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
+          <div
+            class="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
+            <div class="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
+              <img class=" rounded-xl object-cover" src="assets/images/about/2.png" alt="about Us image" />
+            </div>
+            <img class="sm:ml-0 ml-auto rounded-xl object-cover" src="assets/images/about/1.png" alt="about Us image" />
+          </div>
+          <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+            <div class="w-full flex-col justify-center items-start gap-8 flex">
+              <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
+                <h2 class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                  Empowering Each Other to Succeed</h2>
+                <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
+                  Every project we've undertaken has been a collaborative effort, where every person
+                  involved has left their mark. Together, we've not only constructed buildings but also
+                  built enduring connections that define our success story.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="  bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="index.html"
+          class="hover:underline">Ecommerce</a>. All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Admin</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Home</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Cart</a>
+        </li>
+
+      </ul>
+    </footer>
+
+  </body>
+  <script src="assets/js/firebaseConfig.js" type="module"></script>
+  <script src="assets/js/script.js" type="module"></script>
+
+</html>
